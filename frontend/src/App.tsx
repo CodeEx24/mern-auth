@@ -10,15 +10,14 @@ import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 const queryClient = new QueryClient();
 
 const App = () => {
-    console.log('HELLo');
-    return (
-        <QueryClientProvider client={queryClient}>
-            <ReactQueryDevtools initialIsOpen={false} position="right" />
-            <BrowserRouter>
-                <RouterView />
-            </BrowserRouter>
-        </QueryClientProvider>
-    );
+  return (
+    <QueryClientProvider client={queryClient}>
+      <ReactQueryDevtools initialIsOpen={false} position="right" />
+      <BrowserRouter>
+        <RouterView />
+      </BrowserRouter>
+    </QueryClientProvider>
+  );
 };
 
 export default App;
